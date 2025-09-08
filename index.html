@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Web Page</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Sunday Mapunda</div>
+        <div class="nav-links">
+          <a href="#counter">Counter</a>
+          <a href="#faq">FAQ</a>
+          <a href="#form">Form</a>
+        </div>
+        <div class="theme-toggle">
+          <span>Light</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+          </label>
+          <span>Dark</span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="counter">
+      <h2>Counter Game</h2>
+      <p>Click the buttons to increase or decrease the counter value. Try to get exactly 10!</p>
+      <div class="counter-game">
+        <div class="counter-value" id="counter-value">0</div>
+        <div class="game-buttons">
+          <button id="decrement-btn">-1</button>
+          <button id="reset-btn">Reset</button>
+          <button id="increment-btn">+1</button>
+        </div>
+        <p id="game-message"></p>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <p>Click on a question to reveal the answer.</p>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What is JavaScript used for?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>JavaScript is a programming language primarily used for creating interactive and dynamic content on
+              websites. It allows developers to implement complex features, handle events, manipulate the DOM, and much
+              more.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What are JavaScript events?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>JavaScript events are actions or occurrences that happen in the browser, such as clicks, mouse movements,
+              keyboard input, or page loading. Developers can "listen" for these events and execute code in response.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What is DOM manipulation?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>DOM manipulation refers to using JavaScript to interact with and modify the Document Object Model (DOM)
+              of a web page. This includes changing text, styles, attributes, adding or removing elements, and
+              responding to user interactions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="form">
+      <h2>Form Validation</h2>
+      <p>Please fill out the form below. All fields are required.</p>
+      <div class="form-container">
+        <form id="validation-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name">
+            <div class="error" id="name-error">Please enter a valid name (min 2 characters)</div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email">
+            <div class="error" id="email-error">Please enter a valid email address</div>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Create a password">
+            <div class="error" id="password-error">Password must be at least 8 characters with one letter and one number
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" placeholder="Confirm your password">
+            <div class="error" id="confirm-password-error">Passwords do not match</div>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        <div class="success-message" id="success-message">
+          Form submitted successfully!
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Interactive Web Page Assignment &copy; 2023</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
